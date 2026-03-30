@@ -1,0 +1,32 @@
+# .NET Core / C#
+bin/
+obj/
+out/
+publish/
+
+# JetBrains Rider / IntelliJ
+.idea/
+*.sln.iml
+*.user
+*.suo
+*.userosscache
+*.sln.doccache
+
+# Visual Studio
+.vs/
+AppPackages/
+BundleArtifacts/
+VisualStudio2013-Project.suo
+
+# Operating System (Linux/macOS/Windows)
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# User-specific files
+*.pfx
+*.publishsettings
+
+# Avalonia UI specific (if any generated)
+[Dd]ebug/
+[Rr]elease/
