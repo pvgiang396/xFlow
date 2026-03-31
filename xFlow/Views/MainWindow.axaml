@@ -36,23 +36,19 @@
             </StackPanel>
         </Border>
         <Grid Grid.Row="1" Margin="20">
-            <Border BorderThickness="1" BorderBrush="#AAAAAA" 
-                    Background="#2D2D2D" CornerRadius="5" 
-                    HorizontalAlignment="Stretch" VerticalAlignment="Top" 
-                    Padding="0">
-                 <DataGrid ItemsSource="{Binding YourDataList}" 
-                           AutoGenerateColumns="False"
-                           CanUserResizeColumns="True"
-                           GridLinesVisibility="All" 
-                           HorizontalGridLinesBrush="#555"
-                           VerticalGridLinesBrush="#555"
-                           RowBackground="#252525"
-                           RowHeight="30"
-                           Background="Transparent"
-                           IsReadOnly="True"
-                           BorderThickness="0">
-        
-                    <DataGrid.Columns>
+            <Border CornerRadius="8" 
+                    BorderThickness="1" 
+                    BorderBrush="#555" 
+                    ClipToBounds="True"
+                    Margin="10">
+                <DataGrid ItemsSource="{Binding YourDataList}" 
+                          AutoGenerateColumns="False"
+                          GridLinesVisibility="Vertical" 
+                          VerticalGridLinesBrush="#444"
+                          Background="Transparent"
+                          IsReadOnly="True"
+                          BorderThickness="0">
+                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Cột 1" Binding="{Binding Column1Property}" Width="*" />
                         <DataGridTextColumn Header="Cột 2" Binding="{Binding Column2Property}" Width="*" />
                         <DataGridTextColumn Header="Cột 3" Binding="{Binding Column3Property}" Width="*" />

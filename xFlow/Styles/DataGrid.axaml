@@ -7,29 +7,42 @@
         <Setter Property="FontWeight" Value="Bold"/>
         <Setter Property="Height" Value="35"/>
         <Setter Property="Padding" Value="10,0"/>
+        <Setter Property="BorderThickness" Value="1,0,0,0"/> 
+        <Setter Property="BorderBrush" Value="#CCCCCC"/>
     </Style>
 
     <Style Selector="DataGridCell">
         <Setter Property="Foreground" Value="White"/>
         <Setter Property="FontSize" Value="13"/>
     </Style>
-
-    <Style Selector="DataGridRow:nth-child(even)">
-        <Setter Property="Background" Value="#252525"/>
-    </Style>
+    
     <Style Selector="DataGridCell:focus /template/ Grid#FocusVisual">
         <Setter Property="IsVisible" Value="False" />
     </Style>
 
     <Style Selector="DataGridCell:selected">
         <Setter Property="Background" Value="Transparent" />
+        <Setter Property="BorderThickness" Value="0" />
     </Style>
     
+    <Style Selector="DataGridCell /template/ Grid#FocusVisual">
+        <Setter Property="IsVisible" Value="False" />
+    </Style>
+
     <Style Selector="DataGridCell:selected /template/ ContentPresenter">
         <Setter Property="Foreground" Value="White" />
+        <Setter Property="Background" Value="Transparent" />
     </Style>
+    
+    <Style Selector="DataGridRow">
+        <Setter Property="Background" Value="#1E1E1E"/>
+    </Style> 
 
     <Style Selector="DataGridRow:selected /template/ Rectangle#BackgroundRectangle">
         <Setter Property="Fill" Value="Transparent" />
+    </Style>
+
+    <Style Selector="DataGridRow:nth-child(even)">
+        <Setter Property="Background" Value="#252525"/>
     </Style>
 </Styles>
