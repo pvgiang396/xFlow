@@ -15,43 +15,84 @@
                         <StackPanel Spacing="5">
                             <StackPanel Orientation="Horizontal" Spacing="8">
                                 <Button
-                                        Background="Transparent"
-                                        Padding="0"
-                                        Cursor="Hand"
-                                        BorderThickness="0">
-                                    <Image Source="/Assets/json.png" Stretch="Uniform"/>
+                                    Background="Transparent"
+                                    Padding="0"
+                                    Cursor="Hand"
+                                    BorderThickness="0">
+                                    <Image Source="/Assets/excel.png" Stretch="Uniform" />
                                 </Button>
                                 <Button
                                     Background="Transparent"
                                     Padding="0"
                                     Cursor="Hand"
                                     BorderThickness="0">
-                                    <Image Source="/Assets/setting.png" Stretch="Uniform"/>
+                                    <Image Source="/Assets/word.png" Stretch="Uniform" />
+                                </Button>
+                                <Button
+                                    Background="Transparent"
+                                    Padding="0"
+                                    Cursor="Hand"
+                                    BorderThickness="0">
+                                    <Image Source="/Assets/json.png" Stretch="Uniform" />
+                                </Button>
+                                <Button
+                                    Background="Transparent"
+                                    Padding="0"
+                                    Cursor="Hand"
+                                    BorderThickness="0">
+                                    <Image Source="/Assets/setting.png" Stretch="Uniform" />
                                 </Button>
                             </StackPanel>
                         </StackPanel>
-                        <Border Width="1" Background="#444" Height="32"/>
+                        <Border Width="1" Background="#444" Height="32" />
                     </StackPanel>
                 </Border>
             </StackPanel>
         </Border>
         <Grid Grid.Row="1" Margin="20">
-            <Border CornerRadius="8" 
-                    BorderThickness="1" 
-                    BorderBrush="#555" 
+            <Border CornerRadius="8"
+                    BorderThickness="1"
+                    BorderBrush="#555"
                     ClipToBounds="True"
                     Margin="10">
-                <DataGrid ItemsSource="{Binding YourDataList}" 
+                <DataGrid ItemsSource="{Binding YourDataList}"
                           AutoGenerateColumns="False"
-                          GridLinesVisibility="Vertical" 
+                          GridLinesVisibility="Vertical"
                           VerticalGridLinesBrush="#444"
                           Background="Transparent"
                           IsReadOnly="True"
                           BorderThickness="0">
-                     <DataGrid.Columns>
+                    <DataGrid.Columns>
                         <DataGridTextColumn Header="Cột 1" Binding="{Binding Column1Property}" Width="*" />
                         <DataGridTextColumn Header="Cột 2" Binding="{Binding Column2Property}" Width="*" />
-                        <DataGridTextColumn Header="Cột 3" Binding="{Binding Column3Property}" Width="*" />
+                        <DataGridTemplateColumn Width="120">
+                            <DataGridTemplateColumn.HeaderTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="Thao tác"
+                                               Margin="18 0 0 0"
+                                               FontWeight="Bold"
+                                               Foreground="White"
+                                               HorizontalAlignment="Center"
+                                               VerticalAlignment="Center" />
+                                </DataTemplate>
+                            </DataGridTemplateColumn.HeaderTemplate>
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center"
+                                                VerticalAlignment="Center" Spacing="12">
+                                        <Button Background="Transparent" BorderThickness="0" Padding="0">
+                                            <Image Source="avares://xFlow/Assets/view.png" Width="16" Height="16" />
+                                        </Button>
+                                        <Button Background="Transparent" BorderThickness="0" Padding="0">
+                                            <Image Source="avares://xFlow/Assets/edit.png" Width="16" Height="16" />
+                                        </Button>
+                                        <Button Background="Transparent" BorderThickness="0" Padding="0">
+                                            <Image Source="avares://xFlow/Assets/remove.png" Width="16" Height="16" />
+                                        </Button>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
                     </DataGrid.Columns>
                 </DataGrid>
             </Border>
