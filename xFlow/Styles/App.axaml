@@ -1,0 +1,124 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!--Bắt đầu định nghĩa style cho DataGrid-->
+    <Style Selector="DataGrid">
+        <Setter Property="AutoGenerateColumns" Value="False" />
+        <Setter Property="IsReadOnly" Value="True" />
+        <Setter Property="RowHeight" Value="30" />
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="GridLinesVisibility" Value="Vertical" />
+        <Setter Property="VerticalGridLinesBrush" Value="#444444" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="VerticalAlignment" Value="Top" />
+    </Style>
+    <Style Selector="DataGridColumnHeader">
+        <Setter Property="Background" Value="#1764A1" />
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Height" Value="35" />
+        <Setter Property="Padding" Value="10,0" />
+        <Setter Property="AreSeparatorsVisible" Value="True" />
+        <Setter Property="BorderThickness" Value="0,0,0,0" />
+        <Setter Property="BorderBrush" Value="#444444" />
+    </Style>
+
+    <Style Selector="DataGridCell">
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="FontSize" Value="13" />
+    </Style>
+
+    <Style Selector="DataGridCell:focus /template/ Grid#FocusVisual">
+        <Setter Property="IsVisible" Value="False" />
+    </Style>
+
+    <Style Selector="DataGridCell:selected">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="BorderThickness" Value="0" />
+    </Style>
+
+    <Style Selector="DataGridCell /template/ Grid#FocusVisual">
+        <Setter Property="IsVisible" Value="False" />
+    </Style>
+
+    <Style Selector="DataGridCell:selected /template/ ContentPresenter">
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="Background" Value="Transparent" />
+    </Style>
+
+    <Style Selector="DataGridRow">
+        <Setter Property="Background" Value="#1E1E1E" />
+    </Style>
+
+    <Style Selector="DataGridRow:selected /template/ Rectangle#BackgroundRectangle">
+        <Setter Property="Fill" Value="Transparent" />
+    </Style>
+
+    <Style Selector="DataGridRow:nth-child(even)">
+        <Setter Property="Background" Value="#252525" />
+    </Style>
+    
+    <!--Bắt đầu định nghĩa style cho các button, text thao tác-->
+    <Style Selector="Button.btn-action">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Transitions">
+            <Transitions>
+                <DoubleTransition Property="Opacity" Duration="0:0:0.2"/>
+            </Transitions>
+        </Setter>
+    </Style>
+
+    <Style Selector="Button.btn-action:pointerover">
+        <Setter Property="Opacity" Value="0.7"/>
+        <Setter Property="Background" Value="Transparent"/> 
+    </Style>
+
+    <Style Selector="Button.btn-action > Image">
+        <Setter Property="Width" Value="16"/>
+        <Setter Property="Height" Value="16"/>
+        <Setter Property="Stretch" Value="Uniform"/>
+    </Style>
+    
+    <Style Selector="TextBlock.text-action">
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+    
+    <!--Bắt đầu định nghĩa style cho các button ở thanh menu-->
+    <Style Selector="Button.btn-menu">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="BorderThickness" Value="0"/>
+    </Style>
+    
+    <Style Selector="Button.btn-menu > Image">
+        <Setter Property="Stretch" Value="Uniform"/>
+    </Style>
+    
+    <!--Bắt đầu định nghĩa style cho thanh phân trang-->
+    <Style Selector="Button.btn-pagination">
+        <Setter Property="Background" Value="#333333"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="BorderBrush" Value="#555"/>
+        <Setter Property="Padding" Value="10,5"/>
+        <Setter Property="MinWidth" Value="35"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="CornerRadius" Value="4"/>
+    </Style>
+
+    <Style Selector="Button.btn-pagination:pointerover /template/ ContentPresenter">
+        <Setter Property="Background" Value="#1764A1"/> <Setter Property="Foreground" Value="White"/>
+    </Style>
+
+    <Style Selector="Button.btn-pagination.active">
+        <Setter Property="Background" Value="#1764A1"/>
+        <Setter Property="BorderBrush" Value="#1E88E5"/>
+    </Style>
+</Styles>
