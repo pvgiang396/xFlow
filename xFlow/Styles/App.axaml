@@ -98,6 +98,8 @@
     
     <Style Selector="Button.btn-menu > Image">
         <Setter Property="Stretch" Value="Uniform"/>
+        <Setter Property="Height" Value="32"/>
+        <Setter Property="Width" Value="32"/>
     </Style>
     
     <!--Bắt đầu định nghĩa style cho thanh phân trang-->

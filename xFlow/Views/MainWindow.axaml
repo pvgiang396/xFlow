@@ -3,32 +3,36 @@
         xmlns:vm="using:xFlow.ViewModels"
         x:Class="xFlow.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
-        Icon="/Assets/logo.png"
+        Icon="/Assets/convert.png"
         Title="xFlow"
         FontFamily="Segoe UI, Inter, sans-serif"
-        Background="#1E1E1E">
+        Background="#0F111A">
     <Grid RowDefinitions="Auto,*">
         <Border Grid.Row="0" Background="#333333" BorderBrush="#444" BorderThickness="0,0,0,1">
             <StackPanel>
                 <Border Background="#333333" Padding="8,8">
-                    <StackPanel Orientation="Horizontal" Spacing="15">
+                    <StackPanel Orientation="Horizontal" Spacing="10">
                         <StackPanel Spacing="5">
                             <StackPanel Orientation="Horizontal" Spacing="8">
-                                <Button Classes="btn-menu">
-                                    <Image Source="/Assets/excel.png"/>
+                                <Button Classes="btn-menu" ToolTip.Tip="Settings">
+                                    <Image Source="/Assets/setting.png"/>
                                 </Button>
-                                <Button Classes="btn-menu">
+                                <Button Classes="btn-menu" ToolTip.Tip="Word Template Settings">
                                     <Image Source="/Assets/word.png"/>
                                 </Button>
-                                <Button Classes="btn-menu">
-                                    <Image Source="/Assets/json.png"/>
-                                </Button>
-                                <Button Classes="btn-menu">
-                                    <Image Source="/Assets/setting.png"/>
+                                <Button Classes="btn-menu" ToolTip.Tip="API Request Configuration">
+                                    <Image Source="/Assets/api.png"/>
                                 </Button>
                             </StackPanel>
                         </StackPanel>
                         <Border Width="1" Background="#444" Height="32" />
+                        <StackPanel>
+                            <StackPanel Orientation="Horizontal" Spacing="8">
+                                <Button Classes="btn-menu" ToolTip.Tip="Import Excel">
+                                    <Image Source="/Assets/excel.png"/>
+                                </Button>
+                            </StackPanel>
+                        </StackPanel>
                     </StackPanel>
                 </Border>
             </StackPanel>
@@ -55,13 +59,13 @@
                                 <DataTemplate>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center"
                                                 VerticalAlignment="Center" Spacing="12">
-                                        <Button Classes="btn-action">
+                                        <Button Classes="btn-action" ToolTip.Tip="View Details">
                                             <Image Source="avares://xFlow/Assets/view.png"/>
                                         </Button>
-                                        <Button Classes="btn-action">
+                                        <Button Classes="btn-action" ToolTip.Tip="Edit">
                                             <Image Source="avares://xFlow/Assets/edit.png"/>
                                         </Button>
-                                        <Button Classes="btn-action">
+                                        <Button Classes="btn-action" ToolTip.Tip="Remove">
                                             <Image Source="avares://xFlow/Assets/remove.png"/>
                                         </Button>
                                     </StackPanel>
